@@ -93,7 +93,7 @@ public class PlayerController2D : MonoBehaviour
         canAttack = false;
         float actualSpeed = speed; //Guarda speed acueal para devolverla luego
         speed = 0;
-        anim.SetTrigger("Attack");
+        anim.SetTrigger("AC_Duaine_Attack");
         yield return new WaitForSeconds(0.8f);
         speed = actualSpeed;
         canAttack = true;
@@ -106,8 +106,8 @@ public class PlayerController2D : MonoBehaviour
     {
         //Acción para gestionar los cambios de animación
         anim.SetBool("Jump", !isGrounded);
-        if (moveInput.x != 0) anim.SetBool("Run", true);
-        else anim.SetBool("Run", false);
+        if (moveInput.x != 0) anim.SetBool("AC_Duaine_Run", true);
+        else anim.SetBool("AC_Duaine_Run", false);
 
     }
 
