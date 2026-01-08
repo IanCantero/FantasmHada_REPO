@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: a1f32244057b4d243bcf86df67154afc
+guid: 98c1cb567af400c47ac3d89d3db5cae7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8027852665464567858
-    second: Attack Diarmuidt_0
+      213: -8149047794211375387
+    second: Run diarmuidt_0
   - first:
-      213: -2669484426510138080
-    second: Attack Diarmuidt_1
+      213: -4944805233197266319
+    second: Run diarmuidt_1
   - first:
-      213: 3229021609262197489
-    second: Attack Diarmuidt_2
+      213: 4991689602291920193
+    second: Run diarmuidt_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -158,12 +158,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack Diarmuidt_0
+      name: Run diarmuidt_0
       rect:
         serializedVersion: 2
         x: 11
         y: 1
-        width: 49
+        width: 38
         height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,41 +173,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec7cfcdb886579090800000000000000
-      internalID: -8027852665464567858
+      spriteID: 5e6b958e434c8ee80800000000000000
+      internalID: -8149047794211375387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Diarmuidt_1
+      name: Run diarmuidt_1
       rect:
         serializedVersion: 2
-        x: 77
-        y: 0
-        width: 48
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0250d60ce0614fad0800000000000000
-      internalID: -2669484426510138080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack Diarmuidt_2
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 2
-        width: 51
+        x: 74
+        y: 3
+        width: 38
         height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -217,8 +195,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fa2228ab0acfcc20800000000000000
-      internalID: 3229021609262197489
+      spriteID: 17ac8cfc6d5806bb0800000000000000
+      internalID: -4944805233197266319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run diarmuidt_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14dee950f3b064540800000000000000
+      internalID: 4991689602291920193
       vertices: []
       indices: 
       edges: []
@@ -237,9 +237,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Attack Diarmuidt_0: -8027852665464567858
-      Attack Diarmuidt_1: -2669484426510138080
-      Attack Diarmuidt_2: 3229021609262197489
+      Run diarmuidt_0: -8149047794211375387
+      Run diarmuidt_1: -4944805233197266319
+      Run diarmuidt_2: 4991689602291920193
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

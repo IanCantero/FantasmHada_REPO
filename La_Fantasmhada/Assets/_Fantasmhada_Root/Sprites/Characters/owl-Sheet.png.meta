@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 4677ffc361bea4746b8337e951197e9a
+guid: 60c65cf97bea3284fb9dc80e42bc23b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9187962238126519941
-    second: Idle Diarmuidt_0
+      213: -3548807770268682073
+    second: owl-Sheet_0
   - first:
-      213: -3690644389097006904
-    second: Idle Diarmuidt_1
+      213: 3793184358051791185
+    second: owl-Sheet_1
   - first:
-      213: -5619163229798006184
-    second: Idle Diarmuidt_2
+      213: 1181913321184049845
+    second: owl-Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -158,34 +158,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle Diarmuidt_0
+      name: owl-Sheet_0
       rect:
         serializedVersion: 2
         x: 11
         y: 1
-        width: 38
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 586fb35c9f2328f70800000000000000
-      internalID: 9187962238126519941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle Diarmuidt_1
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 0
-        width: 36
+        width: 43
         height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -195,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c895936b7238ccc0800000000000000
-      internalID: -3690644389097006904
+      spriteID: 7a83df4a22a10cec0800000000000000
+      internalID: -3548807770268682073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Diarmuidt_2
+      name: owl-Sheet_1
       rect:
         serializedVersion: 2
-        x: 141
-        y: 2
-        width: 36
-        height: 60
+        x: 75
+        y: 1
+        width: 43
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,8 +195,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85204f860d8b402b0800000000000000
-      internalID: -5619163229798006184
+      spriteID: 151ce35931914a430800000000000000
+      internalID: 3793184358051791185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: owl-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1
+        width: 43
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba3a7057eff66010800000000000000
+      internalID: 1181913321184049845
       vertices: []
       indices: 
       edges: []
@@ -227,7 +227,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -237,9 +237,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle Diarmuidt_0: 9187962238126519941
-      Idle Diarmuidt_1: -3690644389097006904
-      Idle Diarmuidt_2: -5619163229798006184
+      owl-Sheet_0: -3548807770268682073
+      owl-Sheet_1: 3793184358051791185
+      owl-Sheet_2: 1181913321184049845
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

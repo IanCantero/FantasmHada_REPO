@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: bc928becdef54e642963f9bb42f41a66
+guid: 4677ffc361bea4746b8337e951197e9a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8697200882512546926
-    second: Piedra_def-Sheet_0
+      213: 9187962238126519941
+    second: Idle Diarmuidt_0
   - first:
-      213: 2352769136381278118
-    second: Piedra_def-Sheet_1
+      213: -3690644389097006904
+    second: Idle Diarmuidt_1
   - first:
-      213: 4148197791762313413
-    second: Piedra_def-Sheet_2
+      213: -5619163229798006184
+    second: Idle Diarmuidt_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -158,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Piedra_def-Sheet_0
+      name: Idle Diarmuidt_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 11
         y: 1
-        width: 33
-        height: 42
+        width: 38
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 29330a980e55d4780800000000000000
-      internalID: -8697200882512546926
+      spriteID: 586fb35c9f2328f70800000000000000
+      internalID: 9187962238126519941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Piedra_def-Sheet_1
+      name: Idle Diarmuidt_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 1
-        width: 33
-        height: 41
+        x: 77
+        y: 0
+        width: 36
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a732846017b6a020800000000000000
-      internalID: 2352769136381278118
+      spriteID: 8c895936b7238ccc0800000000000000
+      internalID: -3690644389097006904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Piedra_def-Sheet_2
+      name: Idle Diarmuidt_2
       rect:
         serializedVersion: 2
-        x: 144
-        y: 1
-        width: 33
-        height: 40
+        x: 141
+        y: 2
+        width: 36
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c07d0cd9eb519930800000000000000
-      internalID: 4148197791762313413
+      spriteID: 85204f860d8b402b0800000000000000
+      internalID: -5619163229798006184
       vertices: []
       indices: 
       edges: []
@@ -227,7 +227,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -237,9 +237,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Piedra_def-Sheet_0: -8697200882512546926
-      Piedra_def-Sheet_1: 2352769136381278118
-      Piedra_def-Sheet_2: 4148197791762313413
+      Idle Diarmuidt_0: 9187962238126519941
+      Idle Diarmuidt_1: -3690644389097006904
+      Idle Diarmuidt_2: -5619163229798006184
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
