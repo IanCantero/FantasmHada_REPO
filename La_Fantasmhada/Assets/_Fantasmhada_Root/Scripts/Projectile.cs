@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
         {
             gameObject.SetActive(false);  //Apagarse
         }
-        
+
     }
     void ProjectileMove()
     {
@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
             projectileRend.flipX = true; //Flipear el sprite de la bala
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
-       
+
     }
 
 
