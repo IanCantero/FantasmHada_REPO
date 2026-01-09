@@ -3,7 +3,7 @@
     "name": "PlayerInputMap",
     "maps": [
         {
-            "name": "Gameplay",
+            "name": "Move",
             "id": "a830ba57-2e9c-47f2-9fde-2e7ce558c38e",
             "actions": [
                 {
@@ -12,7 +12,7 @@
                     "id": "36d65415-2297-4717-b21f-da9655a3c8fd",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
