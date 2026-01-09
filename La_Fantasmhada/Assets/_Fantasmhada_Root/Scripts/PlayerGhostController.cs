@@ -78,10 +78,11 @@ public class PlayerGhostController : MonoBehaviour
     {
         canAttack = false;
         anim.SetTrigger("Attack");
+        yield return new WaitForSeconds(0.2f);
         GameObject actualProjectile = Instantiate(projectile, shootPoint.position, Quaternion.identity);
         Projectile projectileScript = actualProjectile.GetComponent<Projectile>();
         projectileScript.isFacingRight = isFacingRight;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         canAttack = true;
         Debug.Log("Puedes atacar");
         yield return null;
