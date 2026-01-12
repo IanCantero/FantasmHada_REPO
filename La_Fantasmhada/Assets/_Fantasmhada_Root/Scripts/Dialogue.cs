@@ -17,7 +17,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerOnRange && Input.GetKeyDown("Attack"))
+        if (isPlayerOnRange && Input.GetKeyDown("Interact"))
         {
             StartDialogue();
         }
