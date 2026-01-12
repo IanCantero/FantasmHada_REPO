@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController2D : MonoBehaviour
+public class PlayerFairtyController : MonoBehaviour
 {
     [Header("Movement and Jump Configuration")]
     [SerializeField] float speed;
