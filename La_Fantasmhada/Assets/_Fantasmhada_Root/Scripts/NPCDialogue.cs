@@ -2,49 +2,52 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public class Dialogue : MonoBehaviour
+public class NPCDialogue : MonoBehaviour
 {
-    bool isPlayerOnRange;
+    bool isPlayerInRange;
     bool didDialogueStart;
     int lineIndex;
-    float typingSpeed = 0.05f;
 
+    [SerializeField] float typingSpeed = 0.05f;
+
+    [Header("UI")]
     [SerializeField] GameObject dialogueMark;
-    [SerializeField, TextArea(4, 6)] string[] dialogueLines;
     [SerializeField] GameObject dialoguePanel;
     [SerializeField] TMP_Text dialogueText;
 
-    // Update is called once per frame
-    void Update()
+    [Header("Dialogue")]
+    [SerializeField, TextArea(4, 6)] string[] dialogueLines;
+
+    public bool CanInteract => isPlayerInRange;
+
+    public void Interact()
     {
-        if (isPlayerOnRange && Input.GetKeyDown("Interact"))
-        {
+        if (!didDialogueStart)
             StartDialogue();
-        }
         else if (dialogueText.text == dialogueLines[lineIndex])
-        {
             NextLine();
-        }
-        else 
+        else
         {
             StopAllCoroutines();
             dialogueText.text = dialogueLines[lineIndex];
         }
     }
 
-    private void StartDialogue()
+    void StartDialogue()
     {
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         dialogueMark.SetActive(false);
         lineIndex = 0;
-        Time.timeScale = 0f; // Para todo el game
+        Time.timeScale = 0f;
+
         StartCoroutine(ShowLine());
     }
 
     void NextLine()
     {
         lineIndex++;
+
         if (lineIndex < dialogueLines.Length)
         {
             StartCoroutine(ShowLine());
@@ -54,7 +57,7 @@ public class Dialogue : MonoBehaviour
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
             dialogueMark.SetActive(true);
-            Time.timeScale = 1f; // lo restablece
+            Time.timeScale = 1f;
         }
     }
 
@@ -62,9 +65,9 @@ public class Dialogue : MonoBehaviour
     {
         dialogueText.text = string.Empty;
 
-        foreach(char ch in dialogueLines[lineIndex])
+        foreach (char ch in dialogueLines[lineIndex])
         {
-                        dialogueText.text += ch;
+            dialogueText.text += ch;
             yield return new WaitForSecondsRealtime(typingSpeed);
         }
     }
@@ -73,7 +76,7 @@ public class Dialogue : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            isPlayerOnRange = true;
+            isPlayerInRange = true;
             dialogueMark.SetActive(true);
         }
     }
@@ -82,7 +85,7 @@ public class Dialogue : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            isPlayerOnRange = false;
+            isPlayerInRange = false;
             dialogueMark.SetActive(false);
         }
     }
