@@ -13,26 +13,19 @@ public class PlayerFairtyController : MonoBehaviour
     [SerializeField] float groundCheckRadius; //Define el radio del circulo de suelo
     [SerializeField] LayerMask groundLayer; //Define la capa que puede tocar el detector de suelo
 
-    [Header("Shoot Configuration")]
-    [SerializeField] GameObject projectile;  //Ref prefab bala
-    [SerializeField] Transform shootPoint;  //Ref posicion donde dispara
-    [SerializeField] float shootCooldown = 1; //Tiempo de cooldown entre disparos
-    bool canShoot; 
+ 
 
     //Variables de referencia general
     Rigidbody2D playerRb; //Almacén del rigidbody del player
     Animator anim; //Almacén del controlador de animaciones del player
     PlayerInput input; //Almacén del controlador de inputs del player
     Vector2 moveInput; //Almacén del valor de los botones de movimiento
-    bool canAttack; //Bool de seguridad que define si se puede atacar o no
 
     private void Awake()
     {
          playerRb = GetComponent<Rigidbody2D>(); //Autorreferenciar un componente propio
          anim = GetComponent<Animator>();
          input = GetComponent<PlayerInput>();
-        canAttack = true;
-        canShoot = true;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -75,31 +68,9 @@ public class PlayerFairtyController : MonoBehaviour
         playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
     }
 
-    void Shoot()
+    void Interact()
     {
-        canShoot=false;
-        GameObject actualProjectile = Instantiate(projectile, shootPoint.position, Quaternion.identity);
-       Projectile projectileScript = actualProjectile.GetComponent<Projectile>();
-        projectileScript.isFacingRight = isFacingRight;  //Igualar la orientación de la bala a la del player
-        Invoke(nameof(ResetShoot), shootCooldown); //Se espera tanto tiempo como shootCooldown y entonces resetea el disparo
-    }
-    void ResetShoot()
-    {
-        canShoot = true;
-    }
-
-    IEnumerator Attack()
-    {
-        canAttack = false;
-        float actualSpeed = speed; //Guarda speed acueal para devolverla luego
-        speed = 0;
-        anim.SetTrigger("AC_Duaine_Attack");
-        yield return new WaitForSeconds(0.8f);
-        speed = actualSpeed;
-        canAttack = true;
-        //Devolvemos speed y capacidad de ataque, fin de la rutina
-        yield return null;
-
+        anim.SetTrigger("Interact");
     }
 
     void AnimationManagement()
@@ -123,12 +94,7 @@ public class PlayerFairtyController : MonoBehaviour
     }
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded && canAttack) StartCoroutine(Attack());
-    }
-    public void OnShoot(InputAction.CallbackContext context)
-    {
-        //Lógica del inicio del disparo
-        if (context.performed && canShoot) Shoot();
+        if (context.performed && isGrounded) Interact();
     }
 
 
