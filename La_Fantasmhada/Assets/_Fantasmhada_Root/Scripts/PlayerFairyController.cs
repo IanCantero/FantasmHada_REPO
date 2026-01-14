@@ -77,8 +77,8 @@ public class PlayerFairtyController : MonoBehaviour
     {
         //Acción para gestionar los cambios de animación
         anim.SetBool("Jump", !isGrounded);
-        if (moveInput.x != 0) anim.SetBool("AC_Duaine_Run", true);
-        else anim.SetBool("AC_Duaine_Run", false);
+        if (moveInput.x != 0) anim.SetBool("Run", true);
+        else anim.SetBool("Run", false);
 
     }
 
