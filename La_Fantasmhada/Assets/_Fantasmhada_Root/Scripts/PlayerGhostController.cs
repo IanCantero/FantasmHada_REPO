@@ -58,7 +58,8 @@ public class PlayerGhostController : MonoBehaviour
 
     void Movement()
     {
-        playerRb.linearVelocity = new Vector2(moveInput.x * speed, playerRb.linearVelocity.y);
+        playerRb.linearVelocity = new Vector2(moveInput.x * speed, moveInput.y * speed);
+    
     }
     
     void Flip()
@@ -68,12 +69,6 @@ public class PlayerGhostController : MonoBehaviour
         transform.localScale = currentScale; //Le devolvemos la escala al objeto con el valor x inverso
         isFacingRight = !isFacingRight; //Decirle al bool que cambie el valor al contrario
     }
-    void Jump()
-    {
-        playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
-    }
-
-
     IEnumerator Attack()
     {
         canAttack = false;
@@ -103,10 +98,6 @@ public class PlayerGhostController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-    }
-    public void OnJump(InputAction.CallbackContext context)
-    {
-        if (context.performed) Jump();
     }
     public void OnAttack(InputAction.CallbackContext context)
     {
