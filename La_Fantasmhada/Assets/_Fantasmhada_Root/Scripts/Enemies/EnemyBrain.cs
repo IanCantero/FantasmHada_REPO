@@ -34,7 +34,7 @@ public class EnemyBrain : MonoBehaviour
 
         void OnTriggerEnter2D()
         {
-            if (other.compareTag("Player"))
+            if (targetToFollow)
             {
                 isPlayerOnVision = true;
             }
