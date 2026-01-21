@@ -34,9 +34,18 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    void Start()
+    {
+        playerHealth = maxHealth;
+        playerPoints = 0;
+    }
     private void Update()
     {
         if (playerHealth < 0) playerHealth = 0;
     }
+
+   public void takeDamage(float damage)
+    {
+        playerHealth -= damage;
+    } 
 }
