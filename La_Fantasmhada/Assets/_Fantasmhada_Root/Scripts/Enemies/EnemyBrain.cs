@@ -1,43 +1,85 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.InputSystem;
+
 
 public class EnemyBrain : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] GameObject targetToFollow;
-    bool isPlayerOnRange;
-    bool isPlayerOnVision;
-    Animator anim;
+    [Header("Attack Configuration")]
+    bool canAttack = true;
+    [SerializeField] float attackCooldown = 2f;
 
+ 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("Movement")]
+    [SerializeField] float speed = 3f;
+    [SerializeField] float stopDistance = 0.8f;
+
+    [Header("Target")]
+    [SerializeField] Transform player;
+
+    Rigidbody2D rb;
+
+    Animator animator;
+
+    void Awake()
     {
-      isPlayerOnRange = false;
-      isPlayerOnVision = false;
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-   
-    }
-
-    void EnemyTracker()
-    {
-        if (isPlayerOnRange)
+        if (player == null)
         {
-            anim.SetBool("Run", true);
-            Vector2 vector2 = targetToFollow.transform.position;
+            animator.SetFloat("Speed", 0);
+            return;
         }
 
-        void OnTriggerEnter2D()
+        float distanceX = player.position.x - transform.position.x;
+
+        if (Mathf.Abs(distanceX) > stopDistance)
         {
-            if (targetToFollow)
+            float dir = Mathf.Sign(distanceX);
+            rb.linearVelocity = new Vector2(dir * speed, rb.linearVelocity.y);
+
+            animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            animator.SetFloat("Speed", 0);
+            if (canAttack)
             {
-                isPlayerOnVision = true;
+                StartCoroutine(Attack());
             }
         }
+    } 
+
+    void Update()
+    {
+        // Girar sprite
+        if (player == null) return;
+
+        Vector3 scale = transform.localScale;
+        scale.x = player.position.x > transform.position.x ? 1 : -1;
+        transform.localScale = scale;
     }
+
+    IEnumerator Attack()
+    {
+        canAttack = false;
+        animator.SetTrigger("Attack");
+
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
+        yield return null;
+    }
+    
+   
+
+    public void SetTarget(Transform newTarget)
+    {
+        player = newTarget;
+    }
+
 }
