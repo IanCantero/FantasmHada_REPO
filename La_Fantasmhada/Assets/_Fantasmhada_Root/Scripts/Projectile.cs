@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.tag != "CamConfiner" || collision.gameObject.tag == null)
         {
-            gameObject.SetActive(false);  //Apagarse
+           Destroy(gameObject);  //Apagarse
         }
 
     }
