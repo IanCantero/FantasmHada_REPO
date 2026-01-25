@@ -30,6 +30,9 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] GameObject npcDespawner;
     [SerializeField] GameObject vasyr;
 
+    [Header("Scene Loader Settings")]
+    [SerializeField] GameObject sceneLoader;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -60,6 +63,7 @@ public class DayNightCycle : MonoBehaviour
             enemySpawner.SetActive(true);
             npcDespawner.SetActive(false); 
             vasyr.SetActive(true);
+            sceneLoader.SetActive(true);
         }
     }
 

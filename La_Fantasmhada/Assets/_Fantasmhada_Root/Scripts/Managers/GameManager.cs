@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -48,4 +49,13 @@ public class GameManager : MonoBehaviour
     {
         playerHealth -= damage;
     } 
+    void LoseGame()
+    {
+      if (playerHealth<= 0)
+        {
+            Debug.Log("Has perdido");
+            SceneManager.LoadScene(5);
+        }
+
+    }
 }
