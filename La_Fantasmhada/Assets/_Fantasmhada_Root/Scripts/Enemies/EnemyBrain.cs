@@ -39,6 +39,7 @@ public class EnemyBrain : MonoBehaviour
 
         if (Mathf.Abs(distanceX) > stopDistance)
         {
+            AudioManager.Instance.PlaySFX(2);
             float dir = Mathf.Sign(distanceX);
             rb.linearVelocity = new Vector2(dir * speed, rb.linearVelocity.y);
 
@@ -69,7 +70,7 @@ public class EnemyBrain : MonoBehaviour
     {
         canAttack = false;
         animator.SetTrigger("Attack");
-
+        AudioManager.Instance.PlaySFX(3);
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
         yield return null;

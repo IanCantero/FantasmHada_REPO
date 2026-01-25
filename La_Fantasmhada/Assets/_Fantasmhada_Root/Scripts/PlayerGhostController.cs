@@ -73,6 +73,7 @@ public class PlayerGhostController : MonoBehaviour
     {
         canAttack = false;
         anim.SetTrigger("Attack");
+        AudioManager.Instance.PlaySFX(1);
         yield return new WaitForSeconds(0.2f);
         GameObject actualProjectile = Instantiate(projectile, shootPoint.position, Quaternion.identity);
         Projectile projectileScript = actualProjectile.GetComponent<Projectile>();

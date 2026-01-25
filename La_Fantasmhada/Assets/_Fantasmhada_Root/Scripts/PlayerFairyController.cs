@@ -77,7 +77,11 @@ public class PlayerFairtyController : MonoBehaviour
     {
         //Acción para gestionar los cambios de animación
         anim.SetBool("Jump", !isGrounded);
-        if (moveInput.x != 0) anim.SetBool("Run", true);
+        if (moveInput.x != 0)
+        {
+            AudioManager.Instance.PlaySFX(2);
+            anim.SetBool("Run", true);
+        }
         else anim.SetBool("Run", false);
 
     }
