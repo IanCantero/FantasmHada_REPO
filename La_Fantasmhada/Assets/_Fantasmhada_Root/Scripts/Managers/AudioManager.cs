@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     {
         get
         {
-            if (instance == null) Debug.Log("No hay GameManager");
+            if (instance == null) Debug.Log("No hay AudioManager");
             return instance;
         }
 
