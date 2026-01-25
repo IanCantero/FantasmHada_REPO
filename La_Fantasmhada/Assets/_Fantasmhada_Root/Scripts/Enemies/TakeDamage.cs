@@ -26,8 +26,8 @@ public class TakeDamage : MonoBehaviour
             actualHealth -= 50;
             if (actualHealth > 0)
             {
-                AudioManager.Instance.PlaySFX(5);
                 anim.SetTrigger("Hit");
+                AudioManager.Instance.PlaySFX(5);
             }
             else
             {

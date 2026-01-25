@@ -23,6 +23,15 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] GameObject nightPlayer;
     bool isNightPlayerActive;
 
+    [Header("EnemySpawn Settings")]
+    [SerializeField] GameObject enemySpawner;
+
+    [Header("NPC Spawn Settings")]
+    [SerializeField] GameObject npcDespawner;
+    [SerializeField] GameObject vasyr;
+
+    [Header("Scene Loader Settings")]
+    [SerializeField] GameObject sceneLoader;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,6 +60,10 @@ public class DayNightCycle : MonoBehaviour
             dayPlayer.SetActive(false);
             nightPlayer.SetActive(true);
             isNightPlayerActive = true;
+            enemySpawner.SetActive(true);
+            npcDespawner.SetActive(false); 
+            vasyr.SetActive(true);
+            sceneLoader.SetActive(true);
         }
     }
 
