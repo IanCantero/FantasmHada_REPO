@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6814f9efe5d92fb4f81e7515c82b76c9
+guid: eddf9f9771289494d899d2af8fac6706
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 244550965368321901
-    second: Hoja_0
+      213: -8261308913886201206
+    second: Carta_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hoja_0
+      name: Carta_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
+        x: 1
+        y: 4
         width: 14
-        height: 12
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d67f14caec1d46300800000000000000
-      internalID: 244550965368321901
+      spriteID: a8a7b08205fe95d80800000000000000
+      internalID: -8261308913886201206
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Hoja_0: 244550965368321901
+      Carta_0: -8261308913886201206
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
