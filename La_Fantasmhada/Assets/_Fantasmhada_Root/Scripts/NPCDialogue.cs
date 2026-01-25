@@ -18,14 +18,28 @@ public class NPCDialogue : MonoBehaviour
     [Header("Dialogue")]
     [SerializeField, TextArea(4, 6)] string[] dialogueLines;
 
+    [Header("NPC Swap")]
+    [SerializeField] GameObject npcToSwap;
+    float switchDelay = 4f;
+    bool isSwitching = false;
+
     public bool CanInteract => isPlayerInRange;
 
     public void Interact()
     {
+        if (isSwitching)
+        {
+            return;
+        }
+
         if (!didDialogueStart)
+        {
             StartDialogue();
+        }
         else if (dialogueText.text == dialogueLines[lineIndex])
+        {
             NextLine();
+        }
         else
         {
             StopAllCoroutines();
@@ -58,7 +72,21 @@ public class NPCDialogue : MonoBehaviour
             dialoguePanel.SetActive(false);
             dialogueMark.SetActive(true);
             Time.timeScale = 1f;
+
+            if (npcToSwap != null)
+            {
+                isSwitching = true;
+                StartCoroutine(SwitchWithDelay());
+            }
         }
+    }
+    IEnumerator SwitchWithDelay()
+    {
+
+        yield return new WaitForSecondsRealtime(switchDelay);
+        npcToSwap.SetActive(true);
+        gameObject.SetActive(false);
+       
     }
 
     IEnumerator ShowLine()
@@ -88,5 +116,10 @@ public class NPCDialogue : MonoBehaviour
             isPlayerInRange = false;
             dialogueMark.SetActive(false);
         }
+    }
+    void start()
+    {
+
+        npcToSwap.SetActive(false);
     }
 }
