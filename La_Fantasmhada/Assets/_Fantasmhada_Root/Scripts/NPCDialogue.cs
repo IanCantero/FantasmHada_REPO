@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class NPCDialogue : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class NPCDialogue : MonoBehaviour
     [SerializeField] GameObject npcToSwap;
     float switchDelay = 4f;
     bool isSwitching = false;
+
+    [Header("Scene Transition")]
+    [SerializeField] int sceneToLoad;
+    [SerializeField] bool canLoadScene;
 
     public bool CanInteract => isPlayerInRange;
 
@@ -75,8 +80,15 @@ public class NPCDialogue : MonoBehaviour
 
             if (npcToSwap != null)
             {
+                dialogueMark.SetActive(false);
                 isSwitching = true;
                 StartCoroutine(SwitchWithDelay());
+            }
+            if (canLoadScene == true)
+            {
+                dialogueMark.SetActive(false);
+                isSwitching = true;
+                StartCoroutine(SceneTransition());
             }
         }
     }
@@ -88,6 +100,15 @@ public class NPCDialogue : MonoBehaviour
         gameObject.SetActive(false);
        
     }
+
+    IEnumerator SceneTransition()
+    {
+
+        yield return new WaitForSecondsRealtime(switchDelay);
+        SceneManager.LoadScene(sceneToLoad);
+
+    }
+
 
     IEnumerator ShowLine()
     {
