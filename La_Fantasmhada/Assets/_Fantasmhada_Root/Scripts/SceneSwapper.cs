@@ -15,6 +15,6 @@ public class SceneSwapper : MonoBehaviour
   IEnumerator LoadNextScene()
   {
         yield return StartCoroutine(FadeManager.Instance.FadeOut());
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
   }
 }
