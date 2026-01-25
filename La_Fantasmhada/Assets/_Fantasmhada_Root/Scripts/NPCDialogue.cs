@@ -116,6 +116,7 @@ public class NPCDialogue : MonoBehaviour
 
         foreach (char ch in dialogueLines[lineIndex])
         {
+            
             dialogueText.text += ch;
             yield return new WaitForSecondsRealtime(typingSpeed);
         }
