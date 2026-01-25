@@ -103,8 +103,8 @@ public class NPCDialogue : MonoBehaviour
 
     IEnumerator SceneTransition()
     {
-
-        yield return new WaitForSecondsRealtime(switchDelay);
+        yield return StartCoroutine(FadeManager.Instance.FadeOut());
+      
         SceneManager.LoadScene(sceneToLoad);
 
     }
