@@ -12,7 +12,7 @@ public class PlayerInteractor : MonoBehaviour
         if (currentNPC != null && currentNPC.CanInteract)
         {
             currentNPC.Interact();
-            AudioManager.Instance.PlaySFX(1);
+            AudioManager.Instance.PlaySFX(0);
         }
     }
 
