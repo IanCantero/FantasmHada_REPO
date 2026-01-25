@@ -65,6 +65,7 @@ public class PlayerFairtyController : MonoBehaviour
     }
     void Jump()
     {
+      
         playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
     }
 
@@ -76,11 +77,12 @@ public class PlayerFairtyController : MonoBehaviour
     void AnimationManagement()
     {
         //Acción para gestionar los cambios de animación
-        anim.SetBool("Jump", !isGrounded);
+          anim.SetBool("Jump", !isGrounded);
         if (moveInput.x != 0)
         {
-            AudioManager.Instance.PlaySFX(2);
+
             anim.SetBool("Run", true);
+            AudioManager.Instance.PlaySFX(2);
         }
         else anim.SetBool("Run", false);
 
