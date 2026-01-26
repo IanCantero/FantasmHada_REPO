@@ -39,7 +39,6 @@ public class EnemyBrain : MonoBehaviour
 
         if (Mathf.Abs(distanceX) > stopDistance)
         {
-            AudioManager.Instance.PlaySFX(2);
             float dir = Mathf.Sign(distanceX);
             rb.linearVelocity = new Vector2(dir * speed, rb.linearVelocity.y);
 

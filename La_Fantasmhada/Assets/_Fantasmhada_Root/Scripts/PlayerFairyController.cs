@@ -82,7 +82,6 @@ public class PlayerFairtyController : MonoBehaviour
         {
 
             anim.SetBool("Run", true);
-            AudioManager.Instance.PlaySFX(2);
         }
         else anim.SetBool("Run", false);
 
