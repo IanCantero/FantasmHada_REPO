@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (playerHealth < 0) playerHealth = 0;
+        LoseGame();
     }
 
    public void takeDamage(float damage)
@@ -51,11 +52,12 @@ public class GameManager : MonoBehaviour
     } 
     void LoseGame()
     {
-      if (playerHealth<= 0)
+        if (playerHealth == 0)
         {
             Debug.Log("Has perdido");
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(7);
         }
 
     }
+
 }
